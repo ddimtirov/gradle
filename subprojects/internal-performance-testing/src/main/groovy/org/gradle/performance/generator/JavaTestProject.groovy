@@ -28,7 +28,7 @@ import static org.gradle.performance.generator.CompositeConfiguration.composite
 enum JavaTestProject {
 
     LARGE_MONOLITHIC_JAVA_PROJECT("largeMonolithicJavaProject", GROOVY, 50000, 0, '1536m', '4g', false, [assemble: productionFile('largeMonolithicJavaProject', -1), test: productionFile('largeMonolithicJavaProject', -1)]),
-    LARGE_JAVA_MULTI_PROJECT("largeJavaMultiProject", GROOVY, 100, 500, '1536m', '256m', false, [assemble: productionFile('largeJavaMultiProject'), test: productionFile('largeJavaMultiProject', 450, 2250, 45000)]),
+    LARGE_JAVA_MULTI_PROJECT("largeJavaMultiProject", GROOVY, 100, 500, '4g', '256m', false, [assemble: productionFile('largeJavaMultiProject'), test: productionFile('largeJavaMultiProject', 450, 2250, 45000)]),
     LARGE_JAVA_MULTI_PROJECT_KOTLIN_DSL("largeJavaMultiProjectKotlinDsl", KOTLIN, 100, 500, '1536m', '256m', false, [assemble: productionFile('largeJavaMultiProject'), test: productionFile('largeJavaMultiProject', 450, 2250, 45000)]),
 
     MEDIUM_MONOLITHIC_JAVA_PROJECT("mediumMonolithicJavaProject", GROOVY, 10000, 0, '512m', '1g', false, [assemble: productionFile('mediumMonolithicJavaProject', -1)]),

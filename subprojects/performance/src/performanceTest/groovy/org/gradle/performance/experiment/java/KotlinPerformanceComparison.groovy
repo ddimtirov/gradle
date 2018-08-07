@@ -114,7 +114,7 @@ class KotlinPerformanceComparison extends AbstractCrossBuildPerformanceTest {
         testProject = JavaTestProject.LARGE_JAVA_MULTI_PROJECT
     }
 
-    def "abi change kotlin vs.java with annotation processing"() {
+    def "abi change kotlin vs. java with annotation processing"() {
         given:
         runner.testGroup = "Kotlin comparisons"
         runner.baseline {

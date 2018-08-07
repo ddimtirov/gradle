@@ -34,10 +34,7 @@ class GroovyDslFileContentGenerator extends FileContentGenerator {
         int testForkEvery = getProperty('testForkEvery') as Integer
 
         tasks.withType(JavaCompile) {
-            options.fork = true
             options.incremental = true
-            options.forkOptions.memoryInitialSize = compilerMemory
-            options.forkOptions.memoryMaximumSize = compilerMemory
         }
         
         tasks.withType(Test) {
