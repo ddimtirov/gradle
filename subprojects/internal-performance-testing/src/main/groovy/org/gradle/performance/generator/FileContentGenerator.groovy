@@ -57,14 +57,14 @@ abstract class FileContentGenerator {
                         if (project.hasProperty('apt')) {
                             apply plugin: 'org.jetbrains.kotlin.kapt'
                             dependencies {
-                                kapt 'org.projectlombok:lombok:1.18.2'
+                                kapt 'org.projectlombok:lombok:1.16.18'
                             }
                         }
                     } else {
                         apply plugin: 'java'
                         if (project.hasProperty('apt')) {
                             dependencies {
-                                annotationProcessor 'org.projectlombok:lombok:1.18.2'
+                                annotationProcessor 'org.projectlombok:lombok:1.16.18'
                             }
                         }
                     }
