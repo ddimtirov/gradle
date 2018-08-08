@@ -98,7 +98,6 @@ class AnnotationProcessingCompileTask implements JavaCompiler.CompilationTask {
         for (AnnotationProcessorDeclaration declaredProcessor : processorDeclarations) {
             Class<?> processorClass = loadProcessor(declaredProcessor);
             Processor processor = instantiateProcessor(processorClass);
-            processor = decorateForIncrementalProcessing(processor, declaredProcessor.getType());
             processors.add(processor);
         }
         delegate.setProcessors(processors);
